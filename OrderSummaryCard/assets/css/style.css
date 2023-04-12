@@ -1,0 +1,101 @@
+body {
+    background-image: url("../images/pattern-background-desktop.svg");
+    background-repeat: repeat-x;
+    background-color: hsl(225, 100%, 94%);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    box-shadow: 0 2.5rem 3rem 0 hsl(225, 100%, 94%);
+    border: none;
+    width: 400px;
+    height: 600px;
+    border-radius: 1.5rem;
+    min-height: 100%;
+}
+
+.card .card-header {
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background-size: 100%;
+    background-image: url("../images/illustration-hero.svg");
+    background-repeat: no-repeat;
+    min-height: 32.5%;
+}
+
+/* Card Body */
+.card-body{
+    flex: 0;
+}
+
+.card-item{
+    margin: auto;
+    width: 75%;
+}
+
+.card-item .row{
+    padding: 0.2rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-title {
+    font-weight: bold;
+    text-align: center;
+}
+.card-text {
+    text-align: center;
+    font-weight: 500;
+    color:  hsl(224, 23%, 55%);
+}
+
+.header{
+    color: hsl(223, 47%, 23%);
+}
+
+span{
+    font-weight: 700;
+}
+
+.info p{
+    font-weight: 500;
+    color: hsl(224, 23%, 55%);
+} 
+
+.row{
+    border-radius: 0.5rem;
+    background-color: hsl(225, 100%, 98%);
+}
+
+a{
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Card Footer */
+.footer{
+    color:  hsl(224, 23%, 55%);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .btn{
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0.75rem 0;
+    width: 76%;
+    color: white;
+    font-weight: 700;
+    background-color: hsl(245, 75%, 52%);
+    box-shadow: 0 1.3rem 1rem 0 hsl(225, 100%, 94%);
+}
+
