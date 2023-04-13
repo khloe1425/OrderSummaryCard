@@ -1,7 +1,37 @@
+/* CSS Custom Properties */
+:root {
+    /* ========= Color ======== */
+    /* Primary */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+    /* ========================= */
+
+    /* ======= Typography ====== */
+    /* Body Copy */
+    --size-paragraph: 16px;
+    
+    /* Font Weights */
+    --small-weight: 500;
+    --medium-weight: 700;
+    --large-weight: 900;
+    /* ========================= */
+}
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
 body {
     background-image: url("../images/pattern-background-desktop.svg");
     background-repeat: repeat-x;
-    background-color: hsl(225, 100%, 94%);
+    background-color: var(--pale-blue);
 }
 
 .container {
@@ -11,11 +41,13 @@ body {
     align-items: center;
 }
 
+/* Card Header */
 .card {
-    box-shadow: 0 2.5rem 3rem 0 hsl(225, 100%, 94%);
+    background-color: white;
+    box-shadow: 0 2.5rem 3rem 0 rgb(180 187 220);
     border: none;
     width: 400px;
-    height: 600px;
+    height: 630px;
     border-radius: 1.5rem;
     min-height: 100%;
 }
@@ -30,72 +62,85 @@ body {
 }
 
 /* Card Body */
-.card-body{
+.card-body {
     flex: 0;
 }
 
-.card-item{
+.card-item {
     margin: auto;
-    width: 75%;
 }
 
-.card-item .row{
+h2 {
+    padding-top: 1rem;
+}
+
+.card-item .row {
     padding: 0.2rem 0;
     display: flex;
+    justify-content: space-around;
     align-items: center;
 }
 
 .card-title {
-    font-weight: bold;
+    font-weight: var(--large-weight);
     text-align: center;
 }
+
 .card-text {
     text-align: center;
-    font-weight: 500;
-    color:  hsl(224, 23%, 55%);
 }
 
-.header{
-    color: hsl(223, 47%, 23%);
-}
-
-span{
-    font-weight: 700;
-}
-
-.info p{
-    font-weight: 500;
-    color: hsl(224, 23%, 55%);
-} 
-
-.row{
+.row {
     border-radius: 0.5rem;
-    background-color: hsl(225, 100%, 98%);
+    background-color: var(--very-pale-blue);
 }
 
-a{
-    font-weight: 700;
+a {
     text-decoration: underline;
 }
 
 /* Card Footer */
-.footer{
-    color:  hsl(224, 23%, 55%);
+.footer {
     text-align: center;
     text-decoration: none;
-    font-weight: 700;
     display: flex;
     justify-content: center;
 }
 
-.footer .btn{
+.footer .btn {
+    font-size: 16px;
+    border: none;
     border-radius: 0.75rem;
-    margin-bottom: 2rem;
-    padding: 0.75rem 0;
-    width: 76%;
+    margin: 2rem 0;
+    padding: 1rem 0;
     color: white;
-    font-weight: 700;
-    background-color: hsl(245, 75%, 52%);
-    box-shadow: 0 1.3rem 1rem 0 hsl(225, 100%, 94%);
+    background-color: var(--bright-blue);
+    box-shadow: 0 1.3rem 1rem 0 var(--pale-blue);
+    cursor: pointer;
 }
 
+/* Combine */
+.footer .btn,
+.card-item {
+    width: 80%;
+}
+
+.card-text,
+.info p{
+    font-weight: var(--small-weight);
+}
+
+.card-text,
+.info p,
+.footer {
+    color: var(--desaturated-blue);
+}
+
+span,a,.footer, .footer .btn{
+    font-weight: var(--medium-weight);
+}
+
+.header,
+h2 {
+    color: var(--dark-blue);
+}
