@@ -58,7 +58,7 @@ body {
     background-size: 100%;
     background-image: url("../images/illustration-hero.svg");
     background-repeat: no-repeat;
-    min-height: 32.5%;
+    min-height: 30%;
 }
 
 /* Card Body */
@@ -125,7 +125,7 @@ a {
 /* Combine */
 .footer .btn,
 .card-item {
-    width: 80%;
+    width: 85%;
 }
 
 .card-text,
